@@ -34,25 +34,25 @@
             <p>What is your overall satisfaction with the course?</p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio"id="4" />
+                    <input class="with-gap" name="group1" type="radio"id="4" onclick="dis(this.id,'qa')" />
                     <span>Excellent</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio"/>
+                    <input class="with-gap" name="group1" type="radio" id="3" onclick="dis(this.id,'qa')"/>
                     <span>Good</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio"  />
+                    <input class="with-gap" name="group1" type="radio" id="2" onclick="dis(this.id,'qa')"  />
                     <span>intermediate</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" />
+                    <input class="with-gap" name="group1" type="radio" id="1" onclick="dis(this.id,'qa')"/>
                     <span>Poor</span>
                 </label>
             </p>
@@ -78,9 +78,9 @@
         <button class="btn waves-effect waves-light" onclick="submit()" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
         </button>
-        <button class="btn waves-effect waves-light"   type="submit" name="action" onclick="dis(value,'qa')"/>save
+        <!-- <button class="btn waves-effect waves-light"   type="submit" name="action" onclick="dis(value,'qa')"/>save
         <i class="material-icons right">save</i> 
-    </button>
+    </button> -->
         <script src=script.js> </script>
 </body>
 

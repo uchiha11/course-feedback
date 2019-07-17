@@ -34,25 +34,25 @@
         <form action="#" id="form" data-page="pdlc">
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="4" value ="4" "/>
+                    <input class="with-gap" name="group1" type="radio" id="4" value ="4" onclick="dis(this.id,'pdlc')"/>
                     <span>Excellent</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="3" value ="3"/>
+                    <input class="with-gap" name="group1" type="radio" id="3" value ="3" onclick="dis(this.id,'pdlc')"/>
                     <span>Good</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="2" value ="2" />
+                    <input class="with-gap" name="group1" type="radio" id="2" value ="2"  onclick="dis(this.id,'pdlc')"/>
                     <span>intermediate</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="1"  value ="1" />
+                    <input class="with-gap" name="group1" type="radio" id="1"  value ="1"  onclick="dis(this.id,'pdlc')"/>
                     <span>Poor</span>
                 </label>
             </p>
@@ -79,9 +79,9 @@
               <button class="btn waves-effect waves-light"   type="submit" name="action" onclick="location.href = './qa.html';"/>next
               <i class="material-icons right">send</i> 
           </button>
-          <button class="btn waves-effect waves-light"   type="submit" name="action" onclick="dis(value,'pdlc')"/>save
+          <!-- <button class="btn waves-effect waves-light"   type="submit" name="action" onclick="dis(value,'pdlc')"/>save
               <i class="material-icons right">save</i> 
-          </button>
+          </button> -->
       
         <script src=script.js> </script>
 
