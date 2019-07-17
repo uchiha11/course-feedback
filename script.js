@@ -1,49 +1,39 @@
-var stored = 0;
-var count = 0;
+
 var val = {};
+
+function get(){
+return JSON.parse(localStorage.getItem('feedback')) || {}
+}
+
+function set(key,value){
+
+    var obj= get();
+    obj[key] = value;
+    localStorage.setItem('feedback',JSON.stringify(obj))
+
+}
 function dis(value, question) {
-    count++;
 
+if(question=='sdlc'){
+    set('sdlc',value);
+}
 
+else if(question=='pdlc'){
+    set('pdlc',value);}
 
-    val[question] = value;
-    localStorage.setItem("values", JSON.stringify(val[question]));
-
-
-
-    val[question] = JSON.parse(localStorage.getItem("values"));
-
-
-    // storedValues = parseInt(storedValues);
-    // stored = stored + storedValues;
-
-    // console.log("current rating is " + storedValues);
-    // val[question] = parseInt(val[question]);
-    // val[question] += prev;
-    // console.log(val[question]);
-    // prev = val[question];
+   else if(question=='qa'){
+        set('qa',value);
+    }
+        
 
 }
 
 function submit() {
-
-
-    var comments = document.getElementById('icon_prefix2').value;
+    var comment = document.getElementById('icon_prefix2').value;
     var page = document.getElementById('form').dataset.page;
+  set('comment',comment);
 
-    // var rating = prev1/ count;
-    // console.log(rating);
-    // if (rating <= 1)
-    //     alert(`Overrall rating for course  is Poor .`);
 
-    // else if (rating > 1 && rating <= 2)
-    //     alert(`Overrall rating for course  is intermediate .`);
-    // else if (rating > 2 && rating <= 3)
-    //     alert(`Overrall rating for course } is Good`);
-
-    // else alert(`Overrall rating for course is Excellent .`);
-    alert(comments);
-    console.log(val);
 }
 
 function regExp(x) {
@@ -63,13 +53,8 @@ function login() {
 
     var m = regExp(email);
 
-    val[name] = name;
-    localStorage.setItem("name", JSON.stringify(val[name]));
-    val[name] = JSON.parse(localStorage.getItem("name"));
-
-    val[email] = email;
-    localStorage.setItem("email", JSON.stringify(val[email]));
-    val[email] = JSON.parse(localStorage.getItem("email"));
+   set('name',name);
+   set('email',email);
 
 
     if (m) {
