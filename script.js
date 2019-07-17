@@ -1,11 +1,10 @@
 var stored = 0;
 var count = 0;
-var prev = 0;
-var prev1 = 0;
+var val = {};
 function dis(value, question) {
     count++;
 
-    var val = {};
+
 
     val[question] = value;
     localStorage.setItem("values", JSON.stringify(val[question]));
@@ -14,18 +13,15 @@ function dis(value, question) {
 
     val[question] = JSON.parse(localStorage.getItem("values"));
 
-    console.log(val);
-
-
 
     // storedValues = parseInt(storedValues);
     // stored = stored + storedValues;
 
     // console.log("current rating is " + storedValues);
-    val[question] = parseInt(val[question]);
-    val[question] += prev;
-    console.log(val[question]);
-    prev = val[question];
+    // val[question] = parseInt(val[question]);
+    // val[question] += prev;
+    // console.log(val[question]);
+    // prev = val[question];
 
 }
 
@@ -46,9 +42,8 @@ function submit() {
     //     alert(`Overrall rating for course } is Good`);
 
     // else alert(`Overrall rating for course is Excellent .`);
-
     alert(comments);
-
+    console.log(val);
 }
 
 function regExp(x) {
@@ -62,23 +57,19 @@ function login() {
 
     var name = document.getElementById('icon_prefix').value;
     var email = document.getElementById('icon_email').value;
-    if (name === ""){
-        alert("write valid name");}
+    if (name === "") {
+        alert("write valid name");
+    }
 
     var m = regExp(email);
 
-    var nam = [];
-    nam[0] = name;
-    localStorage.setItem("names", JSON.stringify(name));
-    name = JSON.parse(localStorage.getItem("names"));
+    val[name] = name;
+    localStorage.setItem("name", JSON.stringify(val[name]));
+    val[name] = JSON.parse(localStorage.getItem("name"));
 
-    var emai = [];
-    emai[0] = email;
-    localStorage.setItem("email", JSON.stringify(email));
-    email = JSON.parse(localStorage.getItem("email"));
-
-
-
+    val[email] = email;
+    localStorage.setItem("email", JSON.stringify(val[email]));
+    val[email] = JSON.parse(localStorage.getItem("email"));
 
 
     if (m) {
