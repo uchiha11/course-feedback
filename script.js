@@ -32,17 +32,17 @@ function submit() {
     var comment = document.getElementById('icon_prefix2').value;
     var page = document.getElementById('form').dataset.page;
   set('comment',comment);
-
-  const fs = require('fs') 
   
-let data = "Learning how to write in a file."
-  
-fs.writeFile('Output.txt', data, (err) => { 
-      
-    if (err) throw err; 
-}) 
+function download(text, name, type) {
+    var a = document.createElement("a");
+    var file = new Blob([text], {type: type});
+    a.href = URL.createObjectURL(file);
+    a.download = name;
+    document.body.appendChild(a); 
+    a.click();
+  }
 
-
+  download(JSON.stringify(get()),'test.txt','txt');
 }
 
 function regExp(x) {
