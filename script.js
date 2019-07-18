@@ -5,25 +5,25 @@ function get() {
     return JSON.parse(localStorage.getItem('feedback')) || {}
 }
 
-function set(key, value) {
+function set(key, id) {
 
     var obj = get();
-    obj[key] = value;
+    obj[key] = id;
     localStorage.setItem('feedback', JSON.stringify(obj))
 
 }
-function dis(value, question) {
+function display(id, course) {
 
-    if (question == 'sdlc') {
-        set('sdlc', value);
+    if (course == 'sdlc') {
+        set('sdlc', id);
     }
 
-    else if (question == 'pdlc') {
-        set('pdlc', value);
+    else if (course == 'pdlc') {
+        set('pdlc', id);
     }
 
-    else if (question == 'qa') {
-        set('qa', value);
+    else if (course == 'qa') {
+        set('qa', id);
     }
 
 
