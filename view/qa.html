@@ -4,7 +4,7 @@
 <head>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css" media="screen,projection" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+ 
     <nav>
         <div class="nav-wrapper">
             <a href="rating.html" class="brand-logo center">Course Feedback</a>
@@ -36,31 +36,31 @@
             <p>What is your overall satisfaction with the course?</p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="4" onclick="display(this.id,'qa')" />
+                    <input class="with-gap" name="group1" type="radio" id="4" onclick="selectedOption(this.id,'qa')" />
                     <span>Excellent</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="3" onclick="display(this.id,'qa')" />
+                    <input class="with-gap" name="group1" type="radio" id="3" onclick="selectedOption(this.id,'qa')" />
                     <span>Good</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="2" onclick="display(this.id,'qa')" />
+                    <input class="with-gap" name="group1" type="radio" id="2" onclick="selectedOption(this.id,'qa')" />
                     <span>intermediate</span>
                 </label>
             </p>
             <p>
                 <label>
-                    <input class="with-gap" name="group1" type="radio" id="1" onclick="display(this.id,'qa')" />
+                    <input class="with-gap" name="group1" type="radio" id="1" onclick="selectedOption(this.id,'qa')" />
                     <span>Poor</span>
                 </label>
             </p>
-            <div class="progress">
+            <!-- <div class="progress">
                 <div class="indeterminate"></div>
-            </div>
+            </div> -->
         </form>
         <div class="row">
             <form class="col s12">
@@ -85,7 +85,7 @@
         <!-- <button class="btn waves-effect waves-light"   type="submit" name="action" onclick="dis(value,'qa')"/>save
         <i class="material-icons right">save</i> 
     </button> -->
-        <script src=script.js> </script>
+        <script src="../controller/script.js"> </script>
 </body>
 
 </html>
