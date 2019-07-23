@@ -1,7 +1,6 @@
 
-let val = {};
-// convert es6 let const
-const type='feedback';
+const val = {};
+const type = 'feedback';
 function getFromLocalStorage(type) {
     return JSON.parse(localStorage.getItem(type)) || {}
 }
@@ -16,9 +15,8 @@ function setInLocalStorage(key, id, type) {
 
 
 function selectedOption(id, course) {
-    //change name
-
-    setInLocalStorage(course, id,type);
+    
+    setInLocalStorage(course, id, type);
 
 }
 function downloadFile(text, name, type) {
@@ -51,7 +49,7 @@ function isValidateEmail(email) {
 
         // diff btwn ==  // === ==> is used when comparing of the same datatype  
 
-        setInLocalStorage('email', email,type);
+        setInLocalStorage('email', email, type);
         return true;
     }
     else {
@@ -68,7 +66,7 @@ function isEmptyString(string) { //trim
         return false
     }
     else {
-        setInLocalStorage('name', string,type);
+        setInLocalStorage('name', string, type);
         return true;
     }
 }
