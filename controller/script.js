@@ -1,5 +1,5 @@
 
-const val = {};
+let val = {};
 const type = 'feedback';
 function getFromLocalStorage(type) {
     return JSON.parse(localStorage.getItem(type)) || {}
@@ -31,9 +31,9 @@ function downloadFile(text, name, type) {
 function submit() {
     let comment = document.getElementById('icon_prefix2').value;
     //let page = document.getElementById('form').dataset.page;
-    setInLocalStorage('comment', comment);
+    setInLocalStorage('comment', comment,type);
 
-    downloadFile(JSON.stringify(getFromLocalStorage()), 'test.txt', 'txt');
+    downloadFile(JSON.stringify(getFromLocalStorage(type)), 'test.txt', 'txt');
 }
 
 function regExp(x) {
