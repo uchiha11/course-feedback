@@ -15,7 +15,7 @@ function setInLocalStorage(key, id, type) {
 
 
 function selectedOption(id, course) {
-    
+
     setInLocalStorage(course, id, type);
 
 }
@@ -31,7 +31,7 @@ function downloadFile(text, name, type) {
 function submit() {
     let comment = document.getElementById('icon_prefix2').value;
     //let page = document.getElementById('form').dataset.page;
-    setInLocalStorage('comment', comment,type);
+    setInLocalStorage('comment', comment, type);
 
     downloadFile(JSON.stringify(getFromLocalStorage(type)), 'test.txt', 'txt');
 }
@@ -54,8 +54,6 @@ function isValidateEmail(email) {
     }
     else {
         alert("Email id must be valid");
-
-
     }
 }
 function isEmptyString(string) { //trim
@@ -75,12 +73,6 @@ function login() {
 
     let name = document.getElementById('icon_prefix').value;
     let email = document.getElementById('icon_email').value;
-
-
-
-
-
-
     if (isValidateEmail(email) == true && isEmptyString(name) == true) {
         window.location.href = '../view/login.html';
     }
