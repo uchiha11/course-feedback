@@ -1,4 +1,5 @@
-
+import num from './storage';
+console.log(` imported the number again ${num}`);
 let val = {};
 const type = 'feedback';
 function getFromLocalStorage(type) {
@@ -15,6 +16,7 @@ function setInLocalStorage(key, id, type) {
 
 
 function selectedOption(id, course) {
+    console.log(id,course);
     
     setInLocalStorage(course, id, type);
 
